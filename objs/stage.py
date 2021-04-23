@@ -7,4 +7,4 @@ class Stage:
     def __init__(self, width: int, height: int):
         self.width = width
         self.height = height
-        self.array = np.full((self.width, self.height))
+        self.array = np.full((self.height, self.width, 3), 255)
