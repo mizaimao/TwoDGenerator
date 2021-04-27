@@ -26,7 +26,8 @@ def load_template_stage(image_name: str) -> Stage:
     if image_ndim == 2:
         stage_image = cv2.cvtColor(stage_image, cv2.COLOR_GRAY2RGB)
     elif image_ndim == 3:
-        pass
+        #pass
+        stage_image = cv2.cvtColor(stage_image, cv2.COLOR_RGB2BGR)
     else:
         raise ValueError("%d channel image incompatible." % image_ndim)
     

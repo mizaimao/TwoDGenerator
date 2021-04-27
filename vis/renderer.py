@@ -18,7 +18,7 @@ class Renderer:
         return self.current_frame
 
     def draw_objects(self, stage: Stage, object_collector: ObjectCollector):
-        frame = stage.array.copy().astype(np.float)
+        frame = stage.array.copy().astype(np.uint8)
         for dot in object_collector.dot_collector:
 
             frame = cv2.circle(frame,

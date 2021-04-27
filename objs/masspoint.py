@@ -15,9 +15,9 @@ class MP:
         self.position = position
 
         self.ve_acc = 0.0  # vertical
-        self.ho_acc = 9.8   # horizontal
+        self.ho_acc = 40   # horizontal
 
-        self.ve_spd = 150.0
+        self.ve_spd = 120.0
         self.ho_spd = 0.0
 
     def update_speed(self, delta_time: float):
@@ -35,3 +35,8 @@ class MP:
         self.update_speed(delta_time)
         self.position = (int(new_x), int(new_y))
         print((1 / 2) * self.ve_acc * (delta_time ** 2), (1 / 2) * self.ho_acc * (delta_time ** 2))
+
+    """
+    TODO: collision detection
+    def ray_casting(self, ray_length: float = 20.0):
+    """

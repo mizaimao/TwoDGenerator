@@ -26,9 +26,10 @@ def update_by_frame():
     timer = ButtonTimer(frames_per_second = 24)
 
     # first mass point
-    mp0 = MP(id = 0, mass = 10, radius = 10, position = (500, 200))  
+    mp0 = MP(id = 0, mass = 10, radius = 10, position = (500, 200))
+    mp1 = MP(id = 1, mass = 10, radius = 10, position = (500, 400))  
     oc = ObjectCollector()
-    oc.dot_collector.append(mp0)
+    oc.dot_collector.extend([mp0, mp1])
 
     k = ord('n')
     while k == ord('n'):
