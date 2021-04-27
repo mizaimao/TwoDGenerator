@@ -16,7 +16,6 @@ def update_stage_by_timer(stage: Stage, timer: ButtonTimer):
 def update_objects_by_timer(obj_collector: ObjectCollector,
                             timer: ButtonTimer):
     for dot in obj_collector.dot_collector:
-        print(dot.position)
         dot.update_location(delta_time = timer.delta_time)
 
     return

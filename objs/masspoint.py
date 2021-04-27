@@ -33,7 +33,5 @@ class MP:
         new_y = self.position[1] + self.ho_spd * delta_time + (1 / 2) * self.ho_acc * (delta_time ** 2)
 
         self.update_speed(delta_time)
-
-        print(new_y, new_x, self.ve_acc, self.ho_acc)
         self.position = (int(new_x), int(new_y))
         print((1 / 2) * self.ve_acc * (delta_time ** 2), (1 / 2) * self.ho_acc * (delta_time ** 2))

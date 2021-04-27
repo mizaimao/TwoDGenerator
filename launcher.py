@@ -12,6 +12,7 @@ from objs.spring import Spring
 from timers.button_timer import ButtonTimer
 from objs.obj_collector import ObjectCollector
 from propagator.propogator import update_by_button_timer
+from template.stage_template import load_template_stage
 
 WINDOW_NAME = "Chicken Stage"
 WIDTH = 1920
@@ -19,12 +20,13 @@ HEIGHT = 1080
 
 def update_by_frame():
     frame_counter = 0
-    stage = Stage(width = WIDTH, height = HEIGHT)
+    #stage = Stage(width = WIDTH, height = HEIGHT)
+    stage = load_template_stage('/Users/frank/Projects/TwoDGenerator/template/debug_stage0.png')
     renderer = Renderer(init_stage = stage)
     timer = ButtonTimer(frames_per_second = 24)
 
     # first mass point
-    mp0 = MP(id = 0, mass = 10, radius = 10, position = (500, 500))  
+    mp0 = MP(id = 0, mass = 10, radius = 10, position = (500, 200))  
     oc = ObjectCollector()
     oc.dot_collector.append(mp0)
 
